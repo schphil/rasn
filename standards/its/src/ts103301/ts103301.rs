@@ -3461,7 +3461,7 @@ pub mod etsi_its_dsrc {
         pub transit_schedule: Option<DeltaTime>,
         pub regional: Option<RequestorDescriptionRegional>,
         #[rasn(extension_addition)]
-        pub ocit: OcitRequestorDescriptionContainer,
+        pub ocit: Option<OcitRequestorDescriptionContainer>,
     }
     impl RequestorDescription {
         pub fn new(
@@ -3474,7 +3474,7 @@ pub mod etsi_its_dsrc {
             transit_occupancy: Option<TransitVehicleOccupancy>,
             transit_schedule: Option<DeltaTime>,
             regional: Option<RequestorDescriptionRegional>,
-            ocit: OcitRequestorDescriptionContainer,
+            ocit: Option<OcitRequestorDescriptionContainer>,
         ) -> Self {
             Self {
                 id,
